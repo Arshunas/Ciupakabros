@@ -10,3 +10,5 @@ require __DIR__ .'/../dir2/file1.php';
 
 
 echo '<h1>INDEX END</h1>';
+
+/* laba diena  */

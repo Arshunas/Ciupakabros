@@ -41,3 +41,17 @@ $data[] = ['number' => rand(100, 999), 'color' => rand(0, 1) ? 'crimson' : 'skyb
 $data = serialize($data);
 $data = file_put_contents(__DIR__ . '/data.ser', $data);
 
+$a = 10;
+$b = $a++;
+$c = --$b;
+
+for ($i = 1;; $i++){
+    if ($i > 10) {
+    break;
+    }
+    echo $i;
+    }
+
+    $vakaras='Vakaras';
+$tekstas='Labas $vakaras';
+echo "$tekstas";

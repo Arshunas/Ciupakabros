@@ -28,3 +28,83 @@ foreach($rez as $word) {
 }
 
 echo "<h2>$count<h2>";
+
+$vakaras='Vakaras';
+$tekstas='Labas $vakaras';
+echo "$tekstas";
+
+for ($i = 1;; $i++){
+    if ($i > 10) {
+    break;
+    }
+    echo $i;
+    }
+
+$a = 10;
+$b = $a++;
+$c = --$b;
+echo $c;
+
+$a=5;
+$b='5';
+if ($a===$b){
+echo "Kintamieji lygūs";
+}else{
+echo "Kintamieji nelygūs";
+}
+
+
+$hours = 13;
+switch ($hours) {
+case ($hours < 12):
+echo "Good Morning";break;
+case ($hours < 18):
+echo "Good Afternoon"; break;
+case ($hours < 22):
+echo "Good evening"; break;
+}
+
+$array = [2 => 0, 4 => 1, 1 => 2, 5 => 3];
+$newArray = [];
+foreach($array as $key => $element) {
+$newArray[$element] = $key;
+}
+
+echo $key;
+
+$a = array();
+if ($a[1]) null;
+echo count($a);
+
+function fillArray() {
+    $array = [];
+    $i = 0;
+    while ($i > 0) {
+    $array[] = $i;
+    }
+    return $i;
+    }
+
+echo $i;
+
+$let = "false";    
+if ($let) {
+echo "true";
+} else {
+echo "false";
+}
+
+echo something(2);
+echo something(3);
+function something($number = 1) {
+if (1 >= $number) {
+return 1;
+}
+return $number * something($number - 1);
+}
+
+if (null == false) {
+    echo 'true';
+    } else {
+    echo 'false';
+    }
