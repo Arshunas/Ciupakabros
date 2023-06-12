@@ -1,14 +1,22 @@
 <?php
-
+session_start();
+setcookie('animal', 'RACOON', time() - 3600 * 10);
 //POST scenarijus
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     //kazka padarom
 
+    $_SESSION['animal'] = $_POST['animal'];
+    $_SESSION['magic_number'] = $_POST['magic_number'];
+
     header('Location: http://localhost/ciupakabros/013/');
     die;
 };
 
+//GET scenarijus
+$animal = $_SESSION['animal'] ?? '';
+$mn = $_SESSION['magic_number'] ?? '';
+unset($_SESSION['animal'], $_SESSION['magic_number'])
 ?>
 
 <!DOCTYPE html>
@@ -22,8 +30,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 <body>
     <h1>013</h1>
+    <h2><?= $animal ?> <?= $mn ?></h2>
     <form action="" method="post">
+        <input type="text" name="animal">
+        <br>
         <input type="range" min="0" max="10" value="0" name="magic_number">
+        <br>
         <button type="submit">GO</button>
     </form>
 </body>
