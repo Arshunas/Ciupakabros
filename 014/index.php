@@ -31,6 +31,8 @@ $users = array_map(function($user)
     return $user;
 }, $users);
 
+file_put_contents(__DIR__ . '/users.ser', serialize($users));
+
 echo '<pre>';
 print_r($users);
 
